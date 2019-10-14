@@ -1,0 +1,41 @@
+  $(function () {
+        $("#hp1_top_menu div").mouseover(function () {
+            $(this).find("a").attr("class", "active");
+            var id = $(this).find("a").attr("attr");
+
+            $(this).siblings().find("a").attr("class", "");
+
+            if (id == "zw") {
+                $("#zw").css("display", "block");
+                $("#buy").css("display", "none");
+            } else {
+                $("#buy").css("display", "block");
+                $("#zw").css("display", "none");
+            }
+        });
+        $("#buy li").hover(function () {
+            $(this).find("div").show();
+        }, function () {
+            $(this).find("div").hide();
+        });
+
+        $("#menu_shao").hover(function () {
+            $(this).find("p").show();
+        }, function () {
+            $(this).find("p").hide();
+        });
+
+    })
+    function hideMenu() {
+
+        $("#hp_top_menu").slideUp("fast", function () {
+            $("#hp_show_menu_key").show();
+        });
+
+    }
+    function showMenu() {
+
+        $("#hp_top_menu").slideDown("fast", function () {
+            $("#hp_show_menu_key").hide();
+        });
+    }

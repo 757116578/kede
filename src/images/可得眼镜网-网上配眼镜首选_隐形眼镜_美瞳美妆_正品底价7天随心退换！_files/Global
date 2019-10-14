@@ -1,0 +1,1 @@
+var EyeSee={};EyeSee.hasTicket=false;EyeSee.stylePath='ui/humanity';EyeSee.webName='可得眼镜网';EyeSee.roleName='1';EyeSee.priceName='可得';EyeSee.remarkPicPath='remark';EyeSee.resourcePath='http://pic.keede.com/'

@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* 重置样式 */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video{padding: 0;margin: 0;}
+html,body{
+    height: 100%;
+}
+ol,ul,li{
+    list-style: none;
+    border: 0;
+}
+i,em{
+    font-style: normal
+}
+b,strong{
+    font-weight: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+img{
+    display: block;
+    border: 0;
+}
+ol,ul,li{
+    list-style: none;
+    border: 0;
+}ol,ul,li{
+    list-style: none;
+    border: 0;
+}
+/* 清除浮动 */
+.clearfix_one::after{
+    content: " ";
+    height: 0;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    clear: both;
+}
+.clearfix_tow::after{
+    content: " ";
+    display: table;
+    clear: both;
+}
+/* 怪异盒模型 */
+.g{
+    box-sizing:content-box;
+}

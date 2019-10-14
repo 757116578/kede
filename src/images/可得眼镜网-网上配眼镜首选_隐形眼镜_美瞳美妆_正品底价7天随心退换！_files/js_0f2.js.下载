@@ -1,0 +1,343 @@
+﻿(function ($) {
+    $.fn.slide = function (options) {
+        var defaults = {
+            affect: 4,     //1：上下滚动; 2:幕布式; 3:左右滚动；4：淡入淡出
+            time: 5000,   //间隔时间
+            speed: 500,    //动画快慢
+            dot_text: false//按钮上有无序列号
+        };
+        var opts = $.extend(defaults, options);
+        var $this = $(this);
+        var $this_bg = $('.wide_banner_bg');
+        var ool = $("<div class='dot'><address></address></div>");
+        var $box = $this.find("ul");
+        var $li = $box.find("li");
+        var timer = null;
+        var num = 0;
+
+        $this_bg.css("background-color", $li.eq(0).css("background-color"));
+        $this.append(ool);
+        $box.find("li").each(function (i) {
+            ool.find("address").append($("<b>" + (i + 1) + "</b>"));
+            if (opts.dot_text) {
+                ool.find("b").eq(i).html(i + 1);
+                //ool.find("b").eq(i).html(null);
+            }
+        });
+        ool.find("b").eq(0).addClass("cur");
+        switch (opts.affect) {
+            case 1:
+                break;
+            case 2:
+                $box.find("li").css("display", "none");
+                break;
+            case 3:
+                $box.css({ "width": $li.eq(0).width() * $li.length });
+                $li.css("float", "left");
+                break;
+            case 4:
+                $box.find("li").css("display", "none");
+                break;
+        }
+        $box.find("li").eq(0).show(0);
+        ool.find("b").mouseover(function () {
+            num = $(this).index();
+            run();
+        });
+
+        $(".sy_prev").click(function () {
+            var allNum = $box.find("li").length - 1;
+            if (num == "0") {
+                num = allNum;
+            } else {
+                num = num - 1;
+            }
+            run();
+        });
+
+        $(".sy_next").click(function () {
+
+            var allNum = $box.find("li").length - 1;
+            if (num >= allNum) {
+                num = 0;
+            } else {
+                num = num + 1;
+            }
+
+            run();
+        });
+
+        //控件
+
+        $('.wide_banner').hover(
+                function () {
+                    clearInterval(timer); /*停止动画*/
+                    $('.slideshortcut a').show().css('opacity', '0.6');
+                },
+                         function () {
+                             $('.slideshortcut a').hide();
+                            
+                         }).trigger("mouseleave");
+        /*显示index图片*/
+
+        $('.slideshortcut a').mouseover(function () {
+            $('.slideshortcut a').show();
+        });
+        $('.sy_prev').mouseover(
+        function () {
+            $('.slideshortcut a').show().css('opacity', '1');
+            //$(this).css({ opacity: '0.4', cursor: 'pointer' }); 
+        });
+        $('.sy_next').mouseover(
+         function () {
+             $('.slideshortcut a').show().css('opacity', '1');
+             //$(this).css({ opacity: '0.4', cursor: 'pointer' });
+         });
+
+        $('.sy_prev').mouseleave(
+      function () {
+          $('.slideshortcut a').show().css('opacity', '0.4');
+          //$(this).css({ opacity: '0.4', cursor: 'pointer' }); 
+      });
+        $('.sy_next').mouseleave(
+         function () {
+             $('.slideshortcut a').show().css('opacity', '0.4');
+             //$(this).css({ opacity: '0.4', cursor: 'pointer' });
+         });
+        //控件结束
+
+
+
+        timer = setInterval(auto, opts.time);
+
+        function auto() {
+            num < $box.find("li").length - 1 ? num++ : num = 0;
+            run();
+        }
+        function run() {
+            ool.find("b").eq(num).addClass("cur").siblings().removeClass("cur");
+            switch (opts.affect) {
+                case 1:
+                    $box.stop(true, false).animate({ "top": -240 * num }, opts.speed);
+                    break;
+                case 2:
+                    $box.find("li").css({ "position": "absolute" });
+                    $box.find("li").stop(false, true).fadeOut(opts.speed).eq(num).slideDown(opts.speed);
+                    break;
+                case 3:
+                    $box.stop(true, false).animate({ "left": -670 * num }, opts.speed);
+                    break;
+                case 4:
+                    $box.find("li").css({ "position": "absolute" });
+                    $box.find("li").stop(false, true).fadeOut(opts.speed).eq(num).fadeIn(opts.speed);
+                    $this_bg.css("background-color", $li.eq(num).css("background-color"));
+                    break;
+            }
+        }
+        $this.mouseover(function () {
+            clearInterval(timer);
+        });
+        $this.mouseout(function () {
+            timer = setInterval(auto, opts.time);
+        });
+    };
+})(jQuery);
+$(function () {
+    $(".wide_banner").slide({ affect: 4, time: 5000, speed: 500 });
+    $(".dot address").css("width", $(".dot address").children().length * 26);
+    $(".dot").css("left", $(".wide_banner").width() / 2 - ($(".dot address").children().length * 26 / 2));
+    var len_1 = $("#wide_infcp_top .infcptop li").length;
+    var len_2 = $("#wide_infcp_1f_left .infcp_baniu li").length;
+    var len_3 = $("#wide_infcp_1f_cont .infcp_baniu li").length;
+    var len_4 = $("#wide_infcp_2f_left .infcp_baniu li").length;
+    var len_5 = $("#wide_infcp_2f_cont .infcp_baniu li").length;
+    var len_6 = $("#wide_infcp_3f_left .infcp_baniu li").length;
+    var len_7 = $("#wide_infcp_3f_cont .infcp_baniu li").length;
+    var len_8 = $("#wide_infcp_4f_ban .infcp_baniu li").length;
+    var len_9 = $("#wide_infcp_5f_ban .infcp_baniu li").length;
+    var index_1 = 0;
+    var index_2 = 0;
+    var index_3 = 0;
+    var index_4 = 0;
+    var index_5 = 0;
+    var index_6 = 0;
+    var index_7 = 0;
+    var index_8 = 0;
+    var index_9 = 0;
+    var adTimer_1;
+    var adTimer_2;
+    var adTimer_3;
+    var adTimer_4;
+    var adTimer_5;
+    var adTimer_6;
+    var adTimer_7;
+    var adTimer_8;
+    var adTimer_9;
+    $("#wide_infcp_top .infcp_baniu li").mouseover(function () {
+        index_1 = $("#wide_infcp_top .infcp_baniu li").index(this);
+        showImg("#wide_infcp_top", index_1);
+    }).eq(0).mouseover();
+    $("#wide_infcp_top").hover(function () {
+        clearInterval(adTimer_1);
+    },
+        function () {
+            adTimer_1 = setInterval(function () {
+                showImg("#wide_infcp_top", index_1);
+                index_1++;
+                if (index_1 == len_1) {
+                    index_1 = 0;
+                }
+            },
+                4000);
+        }).trigger("mouseleave");
+
+    $("#wide_infcp_1f_left .infcp_baniu li").mouseover(function () {
+        index_2 = $("#wide_infcp_1f_left .infcp_baniu li").index(this);
+        showImg("#wide_infcp_1f_left", index_2);
+    }).eq(0).mouseover();
+    $("#wide_infcp_1f_left").hover(function () {
+        clearInterval(adTimer_2);
+    },
+        function () {
+            adTimer_2 = setInterval(function () {
+                showImg("#wide_infcp_1f_left", index_2);
+                index_2++;
+                if (index_2 == len_2) {
+                    index_2 = 0;
+                }
+            },
+                4000);
+        }).trigger("mouseleave");
+    $("#wide_infcp_1f_cont .infcp_baniu li").mouseover(function () {
+        index_3 = $("#wide_infcp_1f_cont .infcp_baniu li").index(this);
+        showImg("#wide_infcp_1f_cont", index_3);
+    }).eq(0).mouseover();
+    $("#wide_infcp_1f_cont").hover(function () {
+        clearInterval(adTimer_3);
+    },
+        function () {
+            adTimer_3 = setInterval(function () {
+                showImg("#wide_infcp_1f_cont", index_3);
+                index_3++;
+                if (index_3 == len_3) {
+                    index_3 = 0;
+                }
+            },
+                4000);
+        }).trigger("mouseleave");
+
+    $("#wide_infcp_2f_left .infcp_baniu li").mouseover(function () {
+        index_4 = $("#wide_infcp_2f_left .infcp_baniu li").index(this);
+        showImg("#wide_infcp_2f_left", index_4);
+    }).eq(0).mouseover();
+    $("#wide_infcp_2f_left").hover(function () {
+        clearInterval(adTimer_4);
+    },
+        function () {
+            adTimer_4 = setInterval(function () {
+                showImg("#wide_infcp_2f_left", index_4);
+                index_4++;
+                if (index_4 == len_4) {
+                    index_4 = 0;
+                }
+            },
+                4000);
+        }).trigger("mouseleave");
+    $("#wide_infcp_2f_cont .infcp_baniu li").mouseover(function () {
+        index_5 = $("#wide_infcp_2f_cont .infcp_baniu li").index(this);
+        showImg("#wide_infcp_2f_cont", index_5);
+    }).eq(0).mouseover();
+    $("#wide_infcp_2f_cont").hover(function () {
+        clearInterval(adTimer_5);
+    },
+
+        function () {
+            adTimer_5 = setInterval(function () {
+                showImg("#wide_infcp_2f_cont", index_5);
+                index_5++;
+                if (index_5 == len_5) {
+                    index_5 = 0;
+                }
+            },
+                4000);
+        }).trigger("mouseleave");
+    $("#wide_infcp_3f_left .infcp_baniu li").mouseover(function () {
+        index_6 = $("#wide_infcp_3f_left .infcp_baniu li").index(this);
+        showImg("#wide_infcp_3f_left", index_6);
+    }).eq(0).mouseover();
+    $("#wide_infcp_3f_left").hover(function () {
+        clearInterval(adTimer_6);
+    },
+        function () {
+            adTimer_6 = setInterval(function () {
+                showImg("#wide_infcp_3f_left", index_6);
+                index_6++;
+                if (index_6 == len_6) {
+                    index_6 = 0;
+                }
+            },
+                4000);
+        }).trigger("mouseleave");
+    $("#wide_infcp_3f_cont .infcp_baniu li").mouseover(function () {
+        index_7 = $("#wide_infcp_3f_cont .infcp_baniu li").index(this);
+        showImg("#wide_infcp_3f_cont", index_7);
+    }).eq(0).mouseover();
+    $("#wide_infcp_3f_cont").hover(function () {
+        clearInterval(adTimer_7);
+    },
+        function () {
+            adTimer_7 = setInterval(function () {
+                showImg("#wide_infcp_3f_cont", index_7);
+                index_7++;
+                if (index_7 == len_7) {
+                    index_7 = 0;
+                }
+            },
+                4000);
+        }).trigger("mouseleave");
+
+    $("#wide_infcp_4f_ban .infcp_baniu li").mouseover(function () {
+        index_8 = $("#wide_infcp_4f_ban .infcp_baniu li").index(this);
+        showImg("#wide_infcp_4f_ban", index_8);
+    }).eq(0).mouseover();
+
+    $("#wide_infcp_4f_ban").hover(function () {
+        clearInterval(adTimer_8);
+    },
+        function () {
+            adTimer_8 = setInterval(function () {
+                showImg("#wide_infcp_4f_ban", index_8);
+                index_8++;
+                if (index_8 == len_8) {
+                    index_8 = 0;
+                }
+            },
+                4000);
+        }).trigger("mouseleave");
+
+
+    $("#wide_infcp_5f_ban .infcp_baniu li").mouseover(function () {
+        index_9 = $("#wide_infcp_5f_ban .infcp_baniu li").index(this);
+        showImg("#wide_infcp_5f_ban", index_9);
+    }).eq(0).mouseover();
+
+    $("#wide_infcp_5f_ban").hover(function () {
+        clearInterval(adTimer_9);
+    },
+        function () {
+            adTimer_9 = setInterval(function () {
+                showImg("#wide_infcp_5f_ban", index_9);
+                index_9++;
+                if (index_9 == len_9) {
+                    index_9 = 0;
+                }
+            },
+                4000);
+        }).trigger("mouseleave");
+
+    function showImg(id, index_s) {
+        var adWidth = $(id).width();
+        $(id + " .infcptop").animate({ left: -adWidth * index_s });
+        $(id + " .infcp_baniu li").removeClass("changebg").eq(index_s).addClass("changebg");
+    }
+});

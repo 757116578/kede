@@ -1,0 +1,52 @@
+.sy_prev,
+    .sy_next,.sy_prev:hover,.sy_next:hover {
+        position: absolute;
+        width: 21px;
+        height: 47px;
+        top: 50%;
+        margin-top: -23px;
+        /*background: url(http://pic.keede.com/Images/index_scb/20160511/play_button1.png) no-repeat 0px 0px;*/
+        cursor: pointer;
+        display: block;
+        z-index: 10000;
+    }
+    .sy_prev {
+        position: absolute;
+        left: 0px;
+        background: url(http://pic.keede.com/Images/index_scb/20160511/play_button1.png) no-repeat 0px 0px;
+    }
+    .sy_next {
+        position: absolute;
+        right: 0px;
+        background: url(http://pic.keede.com/Images/index_scb/20160511/play_button1.png) no-repeat -738px 0px;
+        /*background-position: -738px 0px;*/
+    }
+
+    .slideshortcut a {
+        color: #000000;
+        text-decoration: none;
+        /*background-color: #fff;*/
+        display: block;
+        position: absolute;
+        z-index: 500;
+        width: 21px;
+        height: 47px;
+        font-size: 40px;
+        line-height: 40px;
+        text-align: center;
+        opacity: 0;
+    }
+
+        .slideshortcut a:hover {
+            color: #000000;
+            text-decoration: none;
+        }
+
+    /*.sy_prev:hover {
+        background-position: 0px -47px;
+
+    }
+    .sy_next:hover {
+
+        background-position: -738px -47px;
+    }*/
