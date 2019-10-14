@@ -186,6 +186,7 @@
         }
     }
 }
+
 //logo
 #logo {
     width: 100%;
@@ -221,19 +222,20 @@
         }
     }
 }
-//注册
-#register {
+
+//登陆
+#login {
     width: 100%;
     height: 480px;
     background: pink;
 
-    .register-1 {
+    .login-1 {
         width: 1000px;
         height: 480px;
         margin: 0 auto;
         position: relative;
 
-        .register {
+        .login {
             width: 340px;
             height: 400px;
             position: absolute;
@@ -242,50 +244,74 @@
             background: white;
             opacity: .8;
 
-            .register-head {
-                width: 280px;
-                height: 40px;
-                margin: 30px 30px 0 30px;
-                line-height: 40px;
 
-                h2 {
-                    float: left;
-                    color: #ff6600;
-                }
+            //上部分
+            .login-head {
+                width: 340px;
+                height: 61px;
+                border-bottom: 1px solid #9999a4;
+                text-align: center;
 
                 span {
-                    float: right;
-                    font-size: 12px;
+                    line-height: 61px;
+                    font-size: 18px;
+                }
 
-                    a {
-                        color: #ff6600;
+                .span-l {
+                    margin-right: 40px;
+                }
 
-                        span {
-                            width: 20px;
-                            height: 20px;
-                            background-image: url("../images/register/tubiao.png");
-                            background-position: -410px -937px;
-                            margin-top: 7px;
-                        }
-                    }
+                i {
+                    color: #9999a4;
+                    font-size: 24px;
+                }
+
+                .span-r {
+                    margin-left: 40px;
+                }
+
+                .active {
+                    color: #89b929;
                 }
             }
 
-            .registet-base {
+           
 
-                width: 280px;
-                height: 190px;
-                margin: 0 auto;
+            .content {
+                .box1,.box2{
+                    display: none;
+                }
+                .current {
+                    display: block;
+                }
+            }
 
+            //中间部分
+            .login-middle {
+                width: 340px;
+                height: 200px;
+                margin-bottom: 78px;
 
-                .q {
-                    // 判断栏标签
-                    #no {
-                        width: 280px;
-                        height: 12px;
-                        font-size: 12px;
-                        color: red;
+                .box1 {
+                    width: 340px;
+                    height: 200px;
+                    position: relative;
+
+                    img {
+                        position: absolute;
+                        left: 0;
+                        top: 20px;
+                        right: 0;
+                        bottom: 0;
+                        margin: auto;
                     }
+                }
+
+                .box2 {
+                    width: 280px;
+                    height: 180px;
+                    margin: auto;
+                    padding-top: 20px;
 
                     // 手机号码
                     #phone {
@@ -310,67 +336,6 @@
                             border: none;
                             font-size: 13px;
                             outline: none;
-                        }
-                    }
-
-                    //图形验证码
-                    #tuma {
-                        width: 280px;
-                        height: 38px;
-                        margin-top: 10px;
-                        border: 1px solid #bdbdbd;
-
-                        .tuma {
-                            width: 166px;
-                            float: left;
-                            line-height: 36px;
-                            border: none;
-                            font-size: 13px;
-                            outline: none;
-                            margin-left: 12px;
-                        }
-
-                        .image-code-box {
-                            margin-top: 3px;
-                        }
-
-                    }
-
-                    //手机验证码
-                    #phone-ma {
-                        width: 280px;
-                        height: 38px;
-                        margin-top: 10px;
-                        border: 1px solid #bdbdbd;
-
-                        span {
-                            float: left;
-                        }
-
-                        b {
-                            float: left;
-                            margin: 8px 3px 0 0;
-                            color: #9999a4;
-                        }
-
-                        .phone-ma {
-                            width: 124px;
-                            float: left;
-                            line-height: 36px;
-                            border: none;
-                            font-size: 13px;
-                            outline: none;
-                        }
-
-                        .msgCodeBtn {
-                            display: block;
-                            float: right;
-                            width: 104px;
-                            font-size: 12px;
-                            color: white;
-                            background: orangered;
-                            text-align: center;
-                            line-height: 38px;
                         }
                     }
 
@@ -400,34 +365,72 @@
                             outline: none;
                         }
                     }
-                }
 
-                //确认注册
-                #queren {
-                    .form-item {
-                        .button {
-                            width: 280px;
-                            height: 36px;
-                            background: orangered;
-                            text-align: center;
-                            font-size: 16;
-                            color: white;
-                            border: none;
-                            margin-top: 10px;
-                            outline: none;
+                    .denglu {
+                        margin-top: 10px;
+
+                        span {
+                            font-size: 12px;
                         }
 
-                        .bu {
-                            font-size: 12px;
-                            margin-top: 5px;
+                        i {
+                            float: right;
 
                             a {
-                                color: olivedrab;
+                                color: orangered;
+                                font-size: 12px;
                             }
 
-                            a:hover {
-                                color: orangered;
-                            }
+                        }
+
+                        button {
+                            width: 280px;
+                            height: 40px;
+                            background: orangered;
+                            text-align: center;
+                            font-size: 24px;
+                            color: white;
+                            line-height: 40px;
+                            margin-top: 10px;
+                            border: none;
+                            outline: none;
+                        }
+                    }
+                }
+
+
+            }
+
+            //尾巴部分
+            .login-base {
+                width: 340px;
+                height: 60px;
+                margin: 0 auto;
+                background: #ebebf1;
+                text-align: center;
+                line-height: 60px;
+
+                img {
+                    float: left;
+                }
+
+                span {
+                    float: right;
+
+                    a {
+                        font-size: 14px;
+                        color: #ff6600;
+
+                        &:hover {
+                            color: #9999a4;
+                        }
+
+                        span {
+                            width: 20px;
+                            height: 20px;
+                            background-image: url("../images/register/tubiao.png");
+                            background-position: -410px -937px;
+                            margin-top: 20px;
                         }
                     }
 
@@ -436,6 +439,7 @@
         }
     }
 }
+
 //尾部
 #tail {
     width: 100%;

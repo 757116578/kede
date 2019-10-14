@@ -212,20 +212,20 @@
   line-height: 20px;
 }
 
-#register {
+#login {
   width: 100%;
   height: 480px;
   background: pink;
 }
 
-#register .register-1 {
+#login .login-1 {
   width: 1000px;
   height: 480px;
   margin: 0 auto;
   position: relative;
 }
 
-#register .register-1 .register {
+#login .login-1 .login {
   width: 340px;
   height: 400px;
   position: absolute;
@@ -235,149 +235,114 @@
   opacity: .8;
 }
 
-#register .register-1 .register .register-head {
-  width: 280px;
-  height: 40px;
-  margin: 30px 30px 0 30px;
-  line-height: 40px;
-}
-
-#register .register-1 .register .register-head h2 {
-  float: left;
-  color: #ff6600;
-}
-
-#register .register-1 .register .register-head span {
-  float: right;
-  font-size: 12px;
-}
-
-#register .register-1 .register .register-head span a {
-  color: #ff6600;
-}
-
-#register .register-1 .register .register-head span a span {
-  width: 20px;
-  height: 20px;
-  background-image: url("../images/register/tubiao.png");
-  background-position: -410px -937px;
-  margin-top: 7px;
-}
-
-#register .register-1 .register .registet-base {
-  width: 280px;
-  height: 190px;
-  margin: 0 auto;
-}
-
-#register .register-1 .register .registet-base .q #no {
-  width: 280px;
-  height: 12px;
-  font-size: 12px;
-  color: red;
-}
-
-#register .register-1 .register .registet-base .q #phone {
-  width: 280px;
-  height: 38px;
-  margin-top: 10px;
-  border: 1px solid #bdbdbd;
-}
-
-#register .register-1 .register .registet-base .q #phone span {
-  float: left;
-}
-
-#register .register-1 .register .registet-base .q #phone b {
-  float: left;
-  margin: 8px 3px 0 0;
-  color: #9999a4;
-}
-
-#register .register-1 .register .registet-base .q #phone .phone {
-  float: left;
-  line-height: 36px;
-  border: none;
-  font-size: 13px;
-  outline: none;
-}
-
-#register .register-1 .register .registet-base .q #tuma {
-  width: 280px;
-  height: 38px;
-  margin-top: 10px;
-  border: 1px solid #bdbdbd;
-}
-
-#register .register-1 .register .registet-base .q #tuma .tuma {
-  width: 166px;
-  float: left;
-  line-height: 36px;
-  border: none;
-  font-size: 13px;
-  outline: none;
-  margin-left: 12px;
-}
-
-#register .register-1 .register .registet-base .q #tuma .image-code-box {
-  margin-top: 3px;
-}
-
-#register .register-1 .register .registet-base .q #phone-ma {
-  width: 280px;
-  height: 38px;
-  margin-top: 10px;
-  border: 1px solid #bdbdbd;
-}
-
-#register .register-1 .register .registet-base .q #phone-ma span {
-  float: left;
-}
-
-#register .register-1 .register .registet-base .q #phone-ma b {
-  float: left;
-  margin: 8px 3px 0 0;
-  color: #9999a4;
-}
-
-#register .register-1 .register .registet-base .q #phone-ma .phone-ma {
-  width: 124px;
-  float: left;
-  line-height: 36px;
-  border: none;
-  font-size: 13px;
-  outline: none;
-}
-
-#register .register-1 .register .registet-base .q #phone-ma .msgCodeBtn {
-  display: block;
-  float: right;
-  width: 104px;
-  font-size: 12px;
-  color: white;
-  background: orangered;
+#login .login-1 .login .login-head {
+  width: 340px;
+  height: 61px;
+  border-bottom: 1px solid #9999a4;
   text-align: center;
-  line-height: 38px;
 }
 
-#register .register-1 .register .registet-base .q #password {
+#login .login-1 .login .login-head span {
+  line-height: 61px;
+  font-size: 18px;
+}
+
+#login .login-1 .login .login-head .span-l {
+  margin-right: 40px;
+}
+
+#login .login-1 .login .login-head i {
+  color: #9999a4;
+  font-size: 24px;
+}
+
+#login .login-1 .login .login-head .span-r {
+  margin-left: 40px;
+}
+
+#login .login-1 .login .login-head .active {
+  color: #89b929;
+}
+
+#login .login-1 .login .content .box1, #login .login-1 .login .content .box2 {
+  display: none;
+}
+
+#login .login-1 .login .content .current {
+  display: block;
+}
+
+#login .login-1 .login .login-middle {
+  width: 340px;
+  height: 200px;
+  margin-bottom: 78px;
+}
+
+#login .login-1 .login .login-middle .box1 {
+  width: 340px;
+  height: 200px;
+  position: relative;
+}
+
+#login .login-1 .login .login-middle .box1 img {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+#login .login-1 .login .login-middle .box2 {
+  width: 280px;
+  height: 180px;
+  margin: auto;
+  padding-top: 20px;
+}
+
+#login .login-1 .login .login-middle .box2 #phone {
   width: 280px;
   height: 38px;
   margin-top: 10px;
   border: 1px solid #bdbdbd;
 }
 
-#register .register-1 .register .registet-base .q #password span {
+#login .login-1 .login .login-middle .box2 #phone span {
   float: left;
 }
 
-#register .register-1 .register .registet-base .q #password b {
+#login .login-1 .login .login-middle .box2 #phone b {
   float: left;
   margin: 8px 3px 0 0;
   color: #9999a4;
 }
 
-#register .register-1 .register .registet-base .q #password .code {
+#login .login-1 .login .login-middle .box2 #phone .phone {
+  float: left;
+  line-height: 36px;
+  border: none;
+  font-size: 13px;
+  outline: none;
+}
+
+#login .login-1 .login .login-middle .box2 #password {
+  width: 280px;
+  height: 38px;
+  margin-top: 10px;
+  border: 1px solid #bdbdbd;
+}
+
+#login .login-1 .login .login-middle .box2 #password span {
+  float: left;
+}
+
+#login .login-1 .login .login-middle .box2 #password b {
+  float: left;
+  margin: 8px 3px 0 0;
+  color: #9999a4;
+}
+
+#login .login-1 .login .login-middle .box2 #password .code {
   width: 210px;
   float: left;
   line-height: 36px;
@@ -386,29 +351,68 @@
   outline: none;
 }
 
-#register .register-1 .register .registet-base #queren .form-item .button {
+#login .login-1 .login .login-middle .box2 .denglu {
+  margin-top: 10px;
+}
+
+#login .login-1 .login .login-middle .box2 .denglu span {
+  font-size: 12px;
+}
+
+#login .login-1 .login .login-middle .box2 .denglu i {
+  float: right;
+}
+
+#login .login-1 .login .login-middle .box2 .denglu i a {
+  color: orangered;
+  font-size: 12px;
+}
+
+#login .login-1 .login .login-middle .box2 .denglu button {
   width: 280px;
-  height: 36px;
+  height: 40px;
   background: orangered;
   text-align: center;
-  font-size: 16;
+  font-size: 24px;
   color: white;
-  border: none;
+  line-height: 40px;
   margin-top: 10px;
+  border: none;
   outline: none;
 }
 
-#register .register-1 .register .registet-base #queren .form-item .bu {
-  font-size: 12px;
-  margin-top: 5px;
+#login .login-1 .login .login-base {
+  width: 340px;
+  height: 60px;
+  margin: 0 auto;
+  background: #ebebf1;
+  text-align: center;
+  line-height: 60px;
 }
 
-#register .register-1 .register .registet-base #queren .form-item .bu a {
-  color: olivedrab;
+#login .login-1 .login .login-base img {
+  float: left;
 }
 
-#register .register-1 .register .registet-base #queren .form-item .bu a:hover {
-  color: orangered;
+#login .login-1 .login .login-base span {
+  float: right;
+}
+
+#login .login-1 .login .login-base span a {
+  font-size: 14px;
+  color: #ff6600;
+}
+
+#login .login-1 .login .login-base span a:hover {
+  color: #9999a4;
+}
+
+#login .login-1 .login .login-base span a span {
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/register/tubiao.png");
+  background-position: -410px -937px;
+  margin-top: 20px;
 }
 
 #tail {
