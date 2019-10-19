@@ -10,20 +10,9 @@ $db = mysqli_connect("127.0.0.1","root","","kede");
 
 # 002 先检查当前的用户名是否已经被注册,如果已经被注册，返回错误的提示信息。
 $sql = "SELECT * FROM user WHERE phone = '$phone'";
-
 #执行查询语句
 $result = mysqli_query($db, $sql);
 
-/* 
-mysqli_result Object
-(
-    [current_field] => 0
-    [field_count] => 4
-    [lengths] => 
-    [num_rows] => 1   表示查询到的结果有一行
-    [type] => 0
-)
-*/
 $response = array("status"=>"","msg"=>"");
 if(mysqli_num_rows($result) == 1)
 {

@@ -5,7 +5,6 @@ $db = mysqli_connect("127.0.0.1", "root", "", "kede");
 # 002 先获取用户提交的用户名和密码
 $phone = $_REQUEST["phone"];
 $password = $_REQUEST["password"];
-
 # 003 根据获取的数据去数据库中进行对比(匹配)
 $sql = "SELECT * FROM user WHERE phone = '$phone'";
 $result = mysqli_query($db, $sql);
@@ -18,7 +17,8 @@ if (mysqli_num_rows($result) == 0)
 }else{
   # (2) 如果用户存在，那么继续检查密码是否正确，如果不正确，提示(密码不正确)
   // print_r(mysqli_fetch_all($result,MYSQLI_ASSOC));
-  $data = mysqli_fetch_all($result, MYSQLI_ASSOC)[0];
+  $data = mysqli_fetch_all($result,MYSQLI_ASSOC);
+  $data = $data[0];
   if($data["password"] != $password)
   {
     $response["status"] = "error";

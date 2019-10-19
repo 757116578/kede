@@ -103,8 +103,6 @@ $(() => {
  /* 注册按钮的处理： */
     /* 思路：检查表单验证通过 && 图像验证码 && 手机短信验证码 && 是否勾选协议  把页面数据作为参数提交给服务器： */
     $("#registerBtn").click(function() {
-
-
         $("#phoneID").trigger("blur");
         $("#passwordID").trigger("blur");
         $("#passwordB").trigger("blur");
@@ -127,23 +125,18 @@ $(() => {
             alert("请阅读并同意注册协议");
             return;
         }
-
+        
+        
         /* 发请求给服务器  注册： */
         $.ajax({
             type: "post",
-            url: "../server/register.php",
-            data: `
-            &phone=${$("#phoneID").val()}
-            &password=${$("#passwordID").val()}
+            url: "http://127.0.0.1/keshi/src/server/register.php",
+            data: `phone=${$("#phoneID").val()}&password=${$("#passwordID").val()}
             `,
             dataType: "json",
             success: function(response) {
                 /* 注册成功： */
-                console.log(response, response.status);
-
                 if (response.status == "ok") {
-                    console.log("++++");
-
                     /* 跳转到首页 */
                     window.location.href = "http://127.0.0.1/keshi/src/html/login.html";
                 } else {
@@ -152,7 +145,7 @@ $(() => {
                 }
             }
         });
-
+        
 
 
     })

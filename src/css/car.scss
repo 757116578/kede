@@ -1,0 +1,71 @@
+//页面的中间部分长度为1180px
+
+//右边的回到顶部
+.k-right {
+    width: 55px;
+    height: 372px;
+    position: fixed;
+    left: 1270px;
+    top: 100px;
+    z-index: 9999;
+
+    li {
+        width: 55px;
+        height: 62px;
+        cursor: pointer;
+    }
+
+    li:nth-of-type(1) {
+        background: url(../images/index/tubiao.jfif) -309px -414px no-repeat;
+    }
+
+    li:nth-of-type(1).no {
+        background: url(../images/index/tubiao.jfif) -364px -414px no-repeat;
+    }
+
+    li:nth-of-type(2) {
+        background: url(../images/index/tubiao.jfif) -309px -476px no-repeat;
+    }
+
+    li:nth-of-type(2).no {
+        background: url(../images/index/tubiao.jfif) -364px -476px no-repeat;
+    }
+
+    li:nth-of-type(3) {
+        background: url(../images/index/tubiao.jfif) -309px -538px no-repeat;
+    }
+
+    li:nth-of-type(3).no {
+        background: url(../images/index/tubiao.jfif) -364px -538px no-repeat;
+    }
+
+    li:nth-of-type(4) {
+        background: url(../images/index/tubiao.jfif) -309px -600px no-repeat;
+    }
+
+    li:nth-of-type(4).no {
+        background: url(../images/index/tubiao.jfif) -364px -600px no-repeat;
+    }
+
+    li:nth-of-type(5) {
+        background: url(../images/index/tubiao.jfif) -309px -662px no-repeat;
+    }
+
+    li:nth-of-type(5).no {
+        background: url(../images/index/tubiao.jfif) -364px -662px no-repeat;
+    }
+
+    li:nth-of-type(6) {
+        background: url(../images/index/tubiao.jfif) -309px -724px no-repeat;
+    }
+
+    li:nth-of-type(6).no {
+        background: url(../images/index/tubiao.jfif) -364px -724px no-repeat;
+    }
+}
+
+
+
+
+
+

@@ -1,0 +1,731 @@
+//页面的中间部分长度为1180px
+// 购物车
+.cart{
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    left: 1270px;
+    top: 345px;
+    z-index: 9999;
+    .cart_total{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: orangered;
+        color: white;
+        float: right;
+        text-align: center  ;
+    }
+
+}
+
+//右边的回到顶部
+.k-right {
+    width: 55px;
+    height: 372px;
+    position: fixed;
+    left: 1270px;
+    top: 100px;
+    z-index: 9998;
+
+    li {
+        width: 55px;
+        height: 62px;
+        cursor: pointer;
+    }
+
+    li:nth-of-type(1) {
+        background: url(../images/index/tubiao.jfif) -309px -414px no-repeat;
+    }
+
+    li:nth-of-type(1).no {
+        background: url(../images/index/tubiao.jfif) -364px -414px no-repeat;
+    }
+
+    li:nth-of-type(2) {
+        background: url(../images/index/tubiao.jfif) -309px -476px no-repeat;
+    }
+
+    li:nth-of-type(2).no {
+        background: url(../images/index/tubiao.jfif) -364px -476px no-repeat;
+    }
+
+    li:nth-of-type(3) {
+        background: url(../images/index/tubiao.jfif) -309px -538px no-repeat;
+    }
+
+    li:nth-of-type(3).no {
+        background: url(../images/index/tubiao.jfif) -364px -538px no-repeat;
+    }
+
+    li:nth-of-type(4) {
+        background: url(../images/index/tubiao.jfif) -309px -600px no-repeat;
+    }
+
+    li:nth-of-type(4).no {
+        background: url(../images/index/tubiao.jfif) -364px -600px no-repeat;
+    }
+
+    li:nth-of-type(5) {
+        background: url(../images/index/tubiao.jfif) -309px -662px no-repeat;
+    }
+
+    li:nth-of-type(5).no {
+        background: url(../images/index/tubiao.jfif) -364px -662px no-repeat;
+    }
+
+    li:nth-of-type(6) {
+        background: url(../images/index/tubiao.jfif) -309px -724px no-repeat;
+    }
+
+    li:nth-of-type(6).no {
+        background: url(../images/index/tubiao.jfif) -364px -724px no-repeat;
+    }
+}
+
+// 头部
+#head {
+    background: #f0f0f0;
+    border-bottom: 1px solid #e5e5e5;
+
+    .head {
+        width: 1180px;
+        height: 25px;
+        margin: 0 auto;
+        font-size: 11px;
+        line-height: 25px;
+        position: relative;
+        z-index: 9;
+
+        // 左边
+        .head-l-s {
+            float: left;
+            background: url(../images/register/xing_03.gif) no-repeat left;
+            margin-right: 18px;
+
+            a {
+                margin-left: 18px;
+            }
+
+            a:hover {
+                color: orangered;
+            }
+        }
+
+        .head-l-dz {
+            float: left;
+            margin-right: 10px;
+            color: #9999a4;
+
+            a {
+                margin-right: 5px;
+            }
+
+            a:hover {
+                color: orangered;
+            }
+        }
+
+        // 右边
+        .head-r {
+            width: 610px;
+            float: right;
+
+            .lq {
+                float: left;
+
+                :hover {
+                    color: orangered;
+                }
+            }
+
+            .kede {
+                width: 70px;
+                height: 25px;
+                float: left;
+                text-align: center;
+
+                a:hover {
+                    color: orangered;
+                }
+
+                ul {
+                    width: 70px;
+                    background: white;
+                    display: none;
+                    position: absolute;
+
+                    a:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .kede:hover {
+                background: white;
+            }
+
+            .kede:hover ul {
+                display: block;
+            }
+
+            .help {
+                width: 70px;
+                height: 25px;
+                float: left;
+                text-align: center;
+
+                a:hover {
+                    color: orangered;
+                }
+
+                ul {
+                    width: 70px;
+                    background: white;
+                    display: none;
+                    position: absolute;
+
+                    a:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .help:hover {
+                background: white;
+            }
+
+            .help:hover ul {
+                display: block;
+            }
+
+            .x {
+                float: left;
+                color: #e5e5e5;
+                margin-right: 5px;
+            }
+
+            .car {
+                width: 80px;
+                float: left;
+                border-right: 1px solid #e5e5e5;
+                margin-right: 5px;
+
+                img {
+                    float: left;
+                    margin-top: 5px;
+
+                }
+
+                i {
+                    color: orangered;
+                }
+
+                :hover {
+                    color: orangered;
+                }
+            }
+
+            .phone {
+                float: left;
+                width: 60px;
+                text-align: center;
+                margin-right: 20px;
+
+                a:hover {
+                    color: orangered;
+                }
+
+                img {
+                    float: left;
+                    margin-top: 5px;
+
+                }
+
+                ul {
+                    display: none;
+                    position: absolute;
+
+                    li {
+                        img {
+                            margin-top: -0px;
+                            margin-left: -30px;
+                        }
+                    }
+                }
+            }
+
+            :hover ul {
+                display: block;
+            }
+
+
+            .qq {
+                float: left;
+
+                a {
+                    color: orangered;
+                }
+            }
+
+        }
+    }
+}
+
+//logo部分
+#logo {
+    width: 100%;
+    height: 100px;
+
+    .logo {
+        width: 1180px;
+        margin: 0 auto;
+        height: 100px;
+
+        .img1 {
+            float: left;
+            padding-top: 30px;
+        }
+
+        .img2 {
+            float: left;
+            padding-top: 20px;
+            margin-left: 260px;
+        }
+
+        .sousuo {
+            width: 300px;
+            height: 54px;
+            float: right;
+
+            span {
+                margin-top: 30px;
+                display: block;
+                width: 296px;
+                height: 30px;
+                border: 2px solid #90c31f;
+
+                .img3 {
+                    float: left;
+                }
+
+                b {
+                    float: left;
+                    font-size: 20px;
+                    line-height: 26px;
+                    color: #9999a4;
+                }
+
+                input {
+                    width: 180px;
+                    height: 26px;
+                    border: none;
+                    float: left;
+                    outline: none;
+                    font-size: 14px;
+                }
+
+                button {
+                    width: 77px;
+                    height: 30px;
+                    background: #90c31f;
+                    color: white;
+                    float: right;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                }
+            }
+
+            i {
+                color: #9999a4;
+                font-size: 12px;
+
+                a {
+                    color: #9999a4;
+                    font-size: 12px;
+
+                    &:hover {
+                        color: orangered;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//nav部分
+#nav {
+    width: 100%;
+    height: 34px;
+    background: #90c31f;
+
+    .nav {
+        width: 1180px;
+        height: 34px;
+        margin: 0 auto;
+        position: relative;
+
+        #nav-l {
+            width: 210px;
+            height: 34px;
+            background: #6d9d03;
+            float: left;
+            position: relative;
+
+            .span1 {
+                display: block;
+                color: white;
+                text-align: center;
+                line-height: 34px;
+                font-size: 14px;
+                position: relative;
+
+                .i1 {
+                    width: 14px;
+                    height: 12px;
+                    background-image: url("../images/register/tubiao.png");
+                    background-position: 0px -124px;
+                    position: absolute;
+                    top: 12px;
+                    left: 147px;
+                }
+            }
+
+            .cc {
+                display: none;
+            }
+
+            // 二级导航开始
+            .tab {
+                height: 320px;
+                width: 209px;
+                position: absolute;
+                left: 0;
+                top: 35px;
+                background-color: #fff;
+                z-index: 21;
+                border: 1px solid #94c51b;
+                margin-top: -1px;
+
+                .li {
+                    width: 189px;
+                    height: 45.5px;
+                    padding: 0 10px;
+                    // position: relative;
+                    line-height: 46px;
+                    font-size: 14px;
+
+                    .wenzi {
+                        padding-left: 50px;
+                    }
+
+                }
+
+                .li:hover {
+                    border: 1px solid #94c51b;
+                    margin: -1px -1px -1px -1px;
+                }
+
+                .li:hover .child_list {
+                    display: block;
+                }
+
+                .child_list {
+                    display: none;
+                    width: 758px;
+                    height: 318px;
+                    background-color: #fff;
+                    border: 1px solid #94c51b;
+                    position: absolute;
+                    left: 210.5px;
+                    top: -1px;
+                    z-index: 20;
+
+                    //左边
+                    .child_left {
+                        width: 504px;
+                        height: 300px;
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+
+                        b {
+                            margin: 0 5px;
+                        }
+
+                        .cl_dt {
+                            width: 74px;
+                            text-align: right;
+                            padding: 5px 0;
+                            color: #666;
+                            line-height: 24px;
+                            font-weight: bold;
+                            border-bottom: 0 none;
+                            float: left;
+                            text-indent: 0;
+                        }
+
+                        .cl_dd {
+                            width: 410px;
+                            float: left;
+                            line-height: 26px;
+                            padding: 5px 0;
+                            margin: 0 0 10px 10px;
+                            border-bottom: 1px dotted #ccc;
+                            text-indent: 0;
+                            font-size: 12px;
+
+                            a {
+                                line-height: 24px;
+                                color: #666;
+                                padding: 0 2px 0 4px;
+                                border-left: 1px solid #ccc;
+                                white-space: nowrap;
+                            }
+
+                            span a {
+                                color: #f60;
+                            }
+                        }
+
+
+                    }
+
+                    //右边
+
+                    .child_right {
+                        width: 224px;
+                        height: 282px;
+                        position: absolute;
+                        top: 18px;
+                        right: 13px;
+                        border-left: 1px solid #ccc;
+
+                        li {
+                            position: absolute;
+                            right: 0;
+
+                            img {
+                                display: block;
+                            }
+                        }
+
+                        li:first-of-type {
+                            top: 0;
+                        }
+
+                        li:last-of-type {
+                            bottom: 0;
+                        }
+                    }
+                }
+
+            }
+
+            //二级导航结束
+        }
+
+        .nav-r {
+            width: 970px;
+            height: 34px;
+            float: left;
+
+            li {
+                float: left;
+                width: 120px;
+                height: 34px;
+                line-height: 34px;
+                text-align: center;
+
+                &:hover {
+                    background: #77b41f;
+                }
+
+                a {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+//中间部分
+#max {
+    width: 100%;
+
+    .max {
+        width: 1180px;
+        margin: 0 auto;
+
+        #p {
+            font-size: 14px;
+            height: 25px;
+            margin-bottom: 20px;
+
+            a:hover {
+                color: orangered;
+            }
+        }
+
+        //左边放大镜
+        #exzoom {
+            width: 400px;
+            /*height: 400px;*/
+            margin: 20px 0 0 0;
+            float: left;
+
+            // .exzoom_img_box {
+            //     width: 400px;
+            //     height: 400px;
+            //     img {
+            //         width: 100%;
+            //         height: 100%;
+            //     }
+            // }
+
+        }
+
+        //右边的ID
+        .you {
+            width: 400px;
+            height: 200px;
+            float: left;
+            // margin-left: 300px;
+            margin: 200px 0 0 200px;
+        }
+
+        .gouwu {
+            width: 410px;
+            height: 200px;
+            float: left;
+            // margin-left: 300px;
+            margin: 0 0 0 200px;
+
+            .gouwuc {
+                width: 100px;
+                height: 100px;
+                background: orangered;
+                text-align: center;
+                line-height: 100px;
+                font-size: 20px;
+                color: white;
+                float: left;
+
+            }
+
+            .goumai {
+                width: 100px;
+                height: 100px;
+                background: orangered;
+                text-align: center;
+                line-height: 100px;
+                font-size: 20px;
+                color: white;
+                float: right;
+            }
+        }
+    }
+}
+//尾部-1
+#tail-1 {
+    width: 100%;
+    height: 230px;
+    background: #f0f0f0;
+    border-top: 2px solid #dcdcdc;
+    border-bottom: 2px solid #fff;
+    float: left;
+
+    .tail-1 {
+        width: 1180px;
+        height: 230px;
+        margin: 0 auto;
+
+        .tu {
+            width: 980px;
+            height: 100px;
+            border-bottom: 1px solid #fff;
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+
+        .zi {
+            width: 980px;
+            height: 128px;
+            margin: 0 auto;
+            padding: 20px 0 20px 70px;
+            font-size: 12px;
+
+
+            ul {
+                float: left;
+                width: 150px;
+                text-align: center;
+                line-height: 18px;
+
+                .zi-li-1 {
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+
+                a {
+                    color: #9e9e9e;
+                }
+
+                a:hover {
+                    color: orangered;
+                }
+            }
+        }
+    }
+}
+
+//尾部
+#tail {
+    width: 100%;
+    height: 170px;
+    background: #f0f0f0;
+    text-align: center;
+    float: left;
+
+    .tail {
+        width: 1000px;
+        height: 170px;
+        margin: 0 auto;
+
+        .zi {
+            height: 60px;
+            padding: 40px 0 0 0;
+            font-size: 12px;
+            color: #9e9e9e;
+
+            .p2 {
+                margin: 10px 0 0 110px;
+
+                span {
+                    float: left;
+                }
+
+                a {
+                    float: left;
+                }
+
+                img {
+                    float: left;
+                }
+            }
+        }
+
+        a {
+            color: #9e9e9e;
+        }
+
+        a:hover {
+            color: orangered;
+        }
+
+        .tu {
+            margin: 10px 0 0 268px;
+        }
+    }
+}
